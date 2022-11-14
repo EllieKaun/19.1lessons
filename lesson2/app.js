@@ -122,15 +122,15 @@
 //   console.log(4);
 // }, 1000);
 
-const func = (num) => {
-  console.log(num, "orig");
-  const culk = () => {
-    var newNum = num * 8;
-    console.log(newNum, "new");
-  };
-  culk();
-  //   console.log(newNum);
-  console.log(num);
-};
+// const func = (num) => {
+//   console.log(num, "orig");
+//   const culk = () => {
+//     var newNum = num * 8;
+//     console.log(newNum, "new");
+//   };
+//   culk();
+//   //   console.log(newNum);
+//   console.log(num);
+// };
 
-func(42);
+// func(42);
