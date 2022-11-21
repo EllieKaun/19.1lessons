@@ -54,3 +54,32 @@ const closeModal = () => {
 };
 
 closeModalBtn.addEventListener("click", closeModal);
+
+
+const forms = document.querySelectorAll("form")
+
+const postData = (form) => {
+  form.addEventListener("submit", (e) => {
+    console.log("123")
+    e.preventDefault()
+
+    const req = new XMLHttpRequest()
+    req.open("POST", "server.php")
+    req.setRequestHeader("Content-type", "application/json")
+
+    const formData = new FormData(form)
+    const obj = {}
+
+    formData.forEach((item, name) => {
+      obj[name] = item
+    })
+
+    const json = JSON.stringify(obj)
+
+    req.send(json)
+
+  })
+}
+  forms.forEach((item) => {
+    postData(item)
+  })
